@@ -15,9 +15,11 @@ class ViewController2: UIViewController {
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addTask: UIButton!
+    @IBOutlet weak var createToDo: UIButton!
     
     
     var tasks = [String]()
+    var toDoItem = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,7 +98,15 @@ class ViewController2: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-}
+    @IBAction func didTapCreateToDoItem(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "toDo") as! ToDoListViewController
+        
+        }
+        
+    }
+
+    
+
 
 
 
