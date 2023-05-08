@@ -97,11 +97,7 @@ class ViewController2: UIViewController {
         }
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    @IBAction func didTapCreateToDoItem(_ sender: UIButton) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "toDo") as! ToDoListViewController
-        
-        }
+
         
     }
 
