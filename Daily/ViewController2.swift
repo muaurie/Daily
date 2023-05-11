@@ -7,8 +7,9 @@
 
 import UIKit
 import Foundation
+import SwiftUI
 
-
+//Note for future projects, seperate views into different swift files.
 class ViewController2: UIViewController {
 
     
@@ -45,7 +46,7 @@ class ViewController2: UIViewController {
         // Do any additional setup after loading the view.
         updateTasks()
     }
-    
+        
     class HabitsTableViewController: UITableViewController {
             override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return 5
@@ -98,7 +99,10 @@ class ViewController2: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
 
-        
+    @IBSegueAction func swiftUIView(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: TimerView())
+    }
+
     }
 
     
